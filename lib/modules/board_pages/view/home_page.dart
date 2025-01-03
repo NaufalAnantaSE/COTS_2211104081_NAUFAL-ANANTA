@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class HomeView extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
   _HomeViewState createState() => _HomeViewState();
 }
 
-class _HomeViewState extends State<HomeView> {
+class _HomeViewState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,17 +88,17 @@ class _HomeViewState extends State<HomeView> {
           SizedBox(height: 20),
           // Section: Promotions with Images
           _buildPromotionCard(
-            'https://github.com/user-attachments/assets/c4395f7f-eaa6-4565-a6aa-6a342534da87/promo1.png',
+            'https://github.com/user-attachments/assets/5deef866-f756-4ec2-a7f4-bdbd7973ee1f/promo1.png',
             'Makin Seru 🤑',
             'Aktifkan & Sambungkan GoPay & GoPayLater di Tokopedia!',
           ),
           _buildPromotionCard(
-            'https://github.com/user-attachments/assets/c4395f7f-eaa6-4565-a6aa-6a342534da87/promo2.png',
+            'https://github.com/user-attachments/assets/5deef866-f756-4ec2-a7f4-bdbd7973ee1f/promo2.png',
             'Makin Seru 😍',
             'Tukarkan poin dan nikmati voucher eksklusif!',
           ),
           _buildPromotionCard(
-            'https://github.com/user-attachments/assets/c4395f7f-eaa6-4565-a6aa-6a342534da87/promo3.png',
+            'https://github.com/user-attachments/assets/5deef866-f756-4ec2-a7f4-bdbd7973ee1f/promo3.png',
             'Bayar Apa Aja Lebih Hemat!',
             'Pakai GoPay untuk promo cashback hingga 10%',
           ),

@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controller/board_controller.dart';
-
-
-import 'orders_page.dart' as orders; // Halaman Pesanan
+import 'home_page.dart';
+import 'promo_page.dart';
+import 'orders_page.dart';
 
 class BoardPages extends StatelessWidget {
   final BoardController controller = Get.put(BoardController());
@@ -16,14 +15,17 @@ class BoardPages extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             _getPageTitle(controller.tabIndex.value),
+            style: const TextStyle(color: Colors.white),
           ),
+          centerTitle: true,
           backgroundColor: const Color(0xFF00AA13), // Green Gojek
         ),
         body: IndexedStack(
           index: controller.tabIndex.value,
           children: [
-            HomePageWithAds(), // Tab 0 dengan iklan di halaman Home
-            orders.OrdersPage(), // Tab 2
+            HomePage(),
+            PromoPage(),
+            OrdersPage(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
@@ -43,7 +45,7 @@ class BoardPages extends StatelessWidget {
               label: 'Pesanan',
             ),
           ],
-          selectedItemColor: const Color(0xFF00AA13), // Green Gojek
+          selectedItemColor: const Color(0xFF00AA13),
           unselectedItemColor: Colors.grey,
         ),
       ),
@@ -61,55 +63,5 @@ class BoardPages extends StatelessWidget {
       default:
         return "Home";
     }
-  }
-}
-
-class PromoPage {
-}
-
-class HomePageWithAds extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Banner Iklan
-          Container(
-            height: 150,
-            margin: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              image: DecorationImage(
-                image: NetworkImage(
-                  "https://github.com/user-attachments/assets/c4395f7f-eaa6-4565-a6aa-6a342534da87",
-                ),
-                fit: BoxFit.cover,
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          // Konten Home
-          const Padding(
-            padding: EdgeInsets.all(16.0),
-            child: Text(
-              "Welcome to Home Page",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-                color: Color(0xFF004901), // Dark Green
-              ),
-            ),
-          ),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16.0),
-            child: Text(
-              "Explore our new features and enjoy the experience!",
-              style: TextStyle(fontSize: 14, color: Colors.grey),
-            ),
-          ),
-        ],
-      ),
-    );
   }
 }

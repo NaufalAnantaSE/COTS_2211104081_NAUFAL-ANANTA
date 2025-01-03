@@ -1,32 +1,18 @@
 import 'package:flutter/material.dart';
 
-class CustomTabBar extends StatelessWidget {
-  final int selectedIndex;
-  final Function(int) onTap;
-
-  const CustomTabBar({required this.selectedIndex, required this.onTap});
-
-  @override
-  Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      currentIndex: selectedIndex,
-      onTap: onTap,
-      items: const [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home),
-          label: 'Home',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.local_offer),
-          label: 'Promasasasasaao',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart),
-          label: 'Pesanan',
-        ),
-      ],
-      selectedItemColor: Colors.orange,
-      unselectedItemColor: Colors.grey,
-    );
-  }
+Widget customButton(String label, VoidCallback onPressed) {
+  return ElevatedButton(
+    onPressed: onPressed,
+    style: ElevatedButton.styleFrom(
+      backgroundColor: const Color(0xFF00AA13),
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(8),
+      ),
+    ),
+    child: Text(
+      label,
+      style: const TextStyle(color: Colors.white),
+    ),
+  );
 }

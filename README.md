@@ -1,16 +1,12 @@
 # cots_2211104081_naufalananta
 
-A new Flutter project.
+Screen shot
+![image](https://github.com/user-attachments/assets/084892a5-1172-47ba-bd9a-f20c7cd28533)
 
-## Getting Started
+![image](https://github.com/user-attachments/assets/34b458bc-8d84-4269-b278-3f27653dabbd)
 
-This project is a starting point for a Flutter application.
+![image](https://github.com/user-attachments/assets/fad0a5c6-2f74-4b86-a960-1e29ab96a439)
 
-A few resources to get you started if this is your first Flutter project:
+![image](https://github.com/user-attachments/assets/ca899e60-eecc-44fe-91ca-baa9987accd0)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![image](https://github.com/user-attachments/assets/d0dfc37a-bce3-4c18-915b-5b2a779af9b2)
